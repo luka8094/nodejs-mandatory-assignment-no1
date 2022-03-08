@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    height: 50px;
+    border-bottom: solid var(--border-size) black;
+}
+
+a, p{
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 300;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    background: lightblue;
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a{
+    font-size: 1.5em;
+    color: white;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+figure{
+    height: fit-content;
+    width: 80%;
+    background: lightskyblue;
+    padding: 2px;
+    border-radius: 2px;
+    border: solid 1px black;
+}
+
+code{
+    color: white;
+}
+
+#documentation-container{
+    display: flex;
+    flex-direction: column;
+    background-color: lightyellow;
+    height: fit-content;
+    width: 80%;
+    padding: 1em;
+    margin: auto;
+}
+
+.introduction{
+    padding: 1em;
+    height: 70vh;
+}
+
+.introduction p{
+    font-size: 1.5em;
+    margin-right: auto;
+}
+
+#footer{
+    display: flex;
+    height: 50px;
+    width: 80%;
+    border-top: solid var(--border-size) black;
+    background-color: lightyellow;
+    align-items: center;
+    justify-content: flex-start;
+    margin: auto;
+}
+
+#copyright{
+    display: flex;
+    width: 100%;
+    height: 1.5em;
+    background-color: lightgrey;
+    padding-left: 1em;
+}
+
+#NodeJS-span-intro{
+    text-decoration: underline;
+    background-color: lightgrey;
+}
+
+@media screen and (max-width: 800px){
+
+    nav{
+        flex-direction: column;
+        height: fit-content;
+        align-items: flex-end;
+    }
+
+    nav a{
+        height: 40px;
+    }
+
+    #documentation-container{
+        width: 95%;
+        padding: 2em;
+    }
+    
+    #footer{
+        width: 100%;
+        justify-content: center;
+    }
+}

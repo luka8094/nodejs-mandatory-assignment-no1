@@ -1,0 +1,60 @@
+
+<div id="documentation-container">
+    <h1>NodeJS setup</h1>
+
+    <figure>
+        <code>{
+            
+            "dependencies": {
+                "express" : "^4.17.3",
+                "cross-env" : "^7.0.3"
+            },
+            "scripts": {
+                "start": "node app.js",
+                "start-dev": "cross-env PORT=3000 nodemon.cmd app.js"
+            }
+        }</code>
+    </figure>
+
+    <figure>
+        <code>const express = require("express")</code>
+    </figure>
+    <figure>
+        <code>const app = express()</code>
+    </figure>
+
+    <figure>
+        <code>const app = require("express")()</code>
+    </figure>
+
+    <figure>
+        <code>app.listen(3000, () => console.log("Running on server port", 3000))</code>
+    </figure>
+
+    <figure>
+        <code>app.get("/this-is-an-endpoint", (req, res) => {
+            
+            //insert functionality here
+
+            res.send()
+        
+        })</code>
+    </figure>
+
+    <figure>
+        <code>app.get("/", ....)</code>
+    </figure>
+
+    <figure>
+        <code>app.post("/", ....)</code>
+    </figure>
+
+    <figure>
+        <code>app.patch("/", ....)</code>
+    </figure>
+    
+    <figure>
+        <code>app.delete("/", ....)</code>
+    </figure>
+    
+</div>
