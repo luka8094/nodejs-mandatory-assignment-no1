@@ -41,13 +41,6 @@ const PORT = process.env.PORT || 8080
 //Set up test root end-point
 app.get("/", (req, res) => {
 
-
-    res.send({ data : connection })
-})
-
-app.get("/main-page", (req, res) =>{
-
-
     res.send(fullMainPage)
 })
 
