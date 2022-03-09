@@ -1,17 +1,30 @@
 
 <div id="documentation-container">
     <h1>Basic Javascript</h1>
-    <figure>
-        <code>let apple = "apple";</code>
-    </figure>
+    <section>
+        <p>Variables in Javascript</p>
+        <br>
+        <p>Before we venture into NodeJS lets discuss some fundamental Javascript first.</p>
+        <br>
+        <p>In Javascript syntax its possibe to declare value through three different keywords: <span class="code-highlight">var</span>, <span class="code-highlight">let</span>, and <span class="code-highlight">const</span>.</p>
+        <p>Its important to note that they all have difference means and purpose. Its common, if not best, practice to avoid <span class="code-highlight">var</span> keyword and use let and const in most case.</p>
+        <p>One of the reason is due the scope of var keyword which could lead to conflicts and difficulties in code maintainability.</p>
+        <p><span class="code-highlight">let</span> has a block specific local scope which avoids this issue.</p>
+        <br>
+        <p>Below are examples on how to declare variable by each keyword.</p>
 
-    <figure>
-        <code>const PI = 3.14;</code>
-    </figure>
+        <figure>
+            <code>let apple = "apple";</code>
+        </figure>
 
-    <figure>
-        <code>var global = "I'm all over the place!";</code>
-    </figure>
+        <figure>
+            <code>const PI = 3.14;</code>
+        </figure>
+
+        <figure>
+            <code>var global = "I'm all over the place!";</code>
+        </figure>
+    </section>
 
     <figure>
         <code>
