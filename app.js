@@ -39,7 +39,7 @@ const PORT = process.env.PORT || 8080
 
 
 //Set up root end-point
-app.get("/main-page", (req, res) => {
+app.get("/", (req, res) => {
 
     res.send(fullMainPage)
 })
