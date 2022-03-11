@@ -1,0 +1,132 @@
+#menu-button{
+    position: absolute;
+    top: 35px;
+    left: 45px;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .4s ease;
+    perspective: 1000px;
+}
+
+#menu-button.click .inner-flip-icon-container{
+    left: 260px;
+    transition: all .4s ease;
+    transform: rotateY(180deg);
+}
+
+.button-span{
+    color: white;
+    font-size: 28px;
+    line-height: 45px;
+}
+
+#menu-button.click span:before{
+    content: "\f00d";
+}
+
+.sidebar{
+    padding-top: 60px;
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    left: -250px;
+    transition: left .4s ease;
+}
+
+.sidebar.show{
+    left: 0px;
+}
+
+.sidebar .text{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 65px;
+    text-align: center;
+    background: cornflowerblue;
+    letter-spacing: 1px;
+}
+
+nav ul{
+    background: lightgreen;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+
+nav ul li{
+    line-height: 50px;
+}
+
+
+/* nav ul li a{
+    position: relative;
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    width: 100%;
+}*/
+
+
+nav ul ul{
+    position: static;
+    display: none;
+}
+
+nav ul .feature-show.show{
+    display: block;
+}
+
+nav ul .service-show.show{
+    display: block;
+}
+
+nav ul ul li{
+    line-height: 42px;
+    border-top: none;
+}
+
+nav ul ul li a{
+    font-size: 17px;
+    color: whitesmoke;
+    padding-left: 80px;
+}
+
+nav ul li a span{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: transform .4s;
+}
+
+nav ul li a span.rotate{
+    transform: translateY(-50%) rotate(-100deg);
+}
+
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: cornflowerblue;
+    z-index: -1;
+    text-align: center;
+}
+
+.content .header{
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.content p{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+
+
+

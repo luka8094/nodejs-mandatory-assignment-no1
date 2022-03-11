@@ -17,17 +17,17 @@ const mainPageFooter = fileSystem.readFileSync("./public/components/main-page-fo
 
 //Pages
 const mainPage = fileSystem.readFileSync("./public/pages/main.html").toString()
-const basicJavascript = fileSystem.readFileSync("./public/pages/basic-javascript.html").toString()
-const nodejsIntro = fileSystem.readFileSync("./public/pages/nodejs.html").toString()
-const nodejsSetup = fileSystem.readFileSync("./public/pages/nodejs-setup.html").toString()
-const terminalCommands = fileSystem.readFileSync("./public/pages/terminal-commands.html").toString()
+const introduction = fileSystem.readFileSync("./public/pages/basic-javascript.html").toString()
+const firstServer = fileSystem.readFileSync("./public/pages/nodejs.html").toString()
+const servingHtml = fileSystem.readFileSync("./public/pages/nodejs-setup.html").toString()
+const ssr = fileSystem.readFileSync("./public/pages/terminal-commands.html").toString()
 
 //Pages combined with components
 const fullMainPage = nav + mainPage + mainPageFooter
-const fullBasicJavascript = nav + basicJavascript + footer
-const fullNodejsIntro = nav + nodejsIntro + footer
-const fullNodejsSetup = nav + nodejsSetup + footer
-const fullTerminalCommands = nav + terminalCommands + footer
+const fullIntroduction = nav + introduction + footer
+const fullFirstServer = nav + firstServer + footer
+const fullServingHtml = nav + servingHtml + footer
+const fullSsr = nav + ssr + footer
 
 
 //Variables
@@ -45,30 +45,30 @@ app.get("/", (req, res) => {
 })
 
 
-app.get("/nodejs-intro", (req, res) =>{
+app.get("/introduction", (req, res) =>{
 
 
-    res.send(fullNodejsIntro)
+    res.send(fullIntroduction)
 })
 
 
-app.get("/nodejs-setup", (req, res) =>{
+app.get("/first-server", (req, res) =>{
 
 
-    res.send(fullNodejsSetup)
+    res.send(fullFirstServer)
 })
 
-app.get("/basic-javascript", (req, res) =>{
+app.get("/serving-html", (req, res) =>{
 
 
-    res.send(fullBasicJavascript)
+    res.send(fullServingHtml)
 })
 
 
-app.get("/terminal-commands", (req, res) =>{
+app.get("/ssr", (req, res) =>{
 
 
-    res.send(fullTerminalCommands)
+    res.send(fullSsr)
 })
 
 //Connect to server instance

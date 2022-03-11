@@ -5,16 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/components/global.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Orbitron:wght@600&family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;500&family=Noto+Sans+JP&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <script src="/components/menu.js"></script>
     <title>NodeJs mandatory 1 assignment</title>
 </head>
 <body>
-    <nav>
+
+    <!--
+
+        original menu:
+
+        <nav>
         <a href="/">Main</a>
         <a href="/basic-javascript">Javascript</a>
         <a href="/nodejs-intro">NodeJS intro</a>
         <a href="/terminal-commands">Terminal commands</a>
         <a href="/nodejs-setup">NodeJS Setup</a>
+        </nav>
+
+    -->
+
+    <!-- source to side menu implementation: https://www.youtube.com/watch?v=tiO8_846kYg -->
+    <div id="menu-button">
+            <div class="inner-flip-icon-container">
+                <div class="front-side">
+                </div>
+                <div class="back-side">
+                    <div class="line line-menu-1"></div>
+                    <div class="line line-menu-2"></div>
+                </div>
+            </div>
+    </div>
+    <nav id="sidebar" class="sidebar">
+        <ul>
+            <li class="active"><a href="/">Main page</a></li>
+            <li><a href="/introduction" class="features-button">Introduction</a></li>
+            <li><a href="/first-server" class="services-button">First server</a></li>
+            <li><a href="/serving-html" class="pages-button">Serving HTML</a></li>
+            <li><a href="/ssr" class="design-button">SSR</a></li>
+        </ul>
     </nav>
