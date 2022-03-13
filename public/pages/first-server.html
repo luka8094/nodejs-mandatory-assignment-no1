@@ -58,7 +58,7 @@
     </section>    
     <section>
         <h2>NPM and scripts</h2>
-        <p>"npm" is an abbreviation for <span class="code-highlight">node package manager</span>.</p>  
+        <p>The "npm" identifier is an abbreviation for <span class="code-highlight">node package manager</span>. In the NodeJS environment this command can handle package installations and custom scripts.</p>  
 
         <div class="code-snippet">    
             <figure>
@@ -128,7 +128,7 @@
 <code>npm install -g nodemon</code>
                 </pre>
             </figure>
-            <p class="example-text">The terminal installation syntax at courtesy from this source: https://www.npmjs.com/package/nodemon</p>
+            <p class="example-text">The terminal installation syntax at courtesy from this source: https://www.npmjs.com/package/nodemon / https://nodemon.io/</p>
         </div>
         <p>After the installation is complete, nodemon can be executed via the following syntax:</p>
         <div class="code-snippet">
@@ -148,8 +148,17 @@
             </figure>
             <p class="example-text">In some cases, the above syntax will be needed. Both are equally valid.</p>
         </div>
-
-
+        <p>As an addendum, to make your work easier you can simply create a nodemon.json file, in your working project folder, and specify which extensions it should manage:</p>
+        <div class="code-snippet">
+            <figure>
+                <pre>
+<code>{
+    "ext" : "js", "html", "json", "mjs"
+}</code>
+                </pre>
+            </figure>
+            <p class="example-text">In the above example, nodemon monitors work files with "*.js", "*.json", "*.html" and "*.mjs" extensions.</p>
+        </div>
     </section>
 
     <section>

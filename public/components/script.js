@@ -9,6 +9,7 @@ window.onload = () => {
 
     //signature element
     const signatureHtmlElement = document.querySelector("#signature")
+    const signatureTextHtmlElement = document.querySelector("#signature-text")
 
     //debugging menu html elements registration
     console.log(menuSidebarHtmlElement)
@@ -30,5 +31,6 @@ window.onload = () => {
 
     function expand(){
         signatureHtmlElement.classList.toggle("pop")
+        signatureTextHtmlElement.classList.toggle("text-pop")
     }
 }

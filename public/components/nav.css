@@ -227,9 +227,9 @@ menu-fading-in{
     font-size: 4em;
     color: rgba(0,0,0,0.0);
     transition: color 2s ease;
-    transition-delay: .5s;
+    transition-delay: .1s;
 }
 
-#signature.pop #signature-text{
+#signature-text.text-pop{
     color: rgba(0,0,0,1);
 }

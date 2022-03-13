@@ -4,7 +4,7 @@
     <h1>SSR</h1>
     <section>
        <h2>Client Side Rendering</h2>
-       <p><span class="code-highlight">Client Side Rendering</span> (CSR) is when the server responds with the individual web files on a given request. First it will dispatch the <span class="code-highlight">document object model</span> (DOM) structure meaning the HTML markup, followed by the styling and then functionality. All these will be rendered in a user's (client) browser.</p>
+       <p><span class="code-highlight">Client Side Rendering</span> (CSR) is when the server responds with delivering the individual files, that make up the website's entirety, upon a given fetch request. First the servers dispatches the base <span class="code-highlight">document object model</span> (DOM) structure, meaning the HTML then the styling (CSS) followed by the functionality (JavaScript). All these will be rendered in a user's (client) browser.</p>
        <p>In other words, the user's browser is responsible for rendering a given website and its content.</p>
         
     </section>
@@ -16,6 +16,49 @@
 
     <section>
         <h2>CSR vs. SSR</h2>
-        <p>There are various advantages and disadvantages to both CSR and SSR. Ultimately, it will depend on what kind of solution you're aiming for.</p>
+        <p>Each type of rendering has its caveats. They both comes with a set of advantages and disadvantages. The choice will depend on what kind of solution you're aiming for. Here's some lists of a few points to keep in mind:</p>
+
+        <!-- various sources used for the subject what were used for research: 
+        https://www.youtube.com/watch?v=rNVcZklcmqU
+        https://www.solutelabs.com/blog/client-side-vs-server-side-rendering-what-to-choose-when
+        https://www.freecodecamp.org/news/what-exactly-is-client-side-rendering-and-hows-it-different-from-server-side-rendering-bd5c786b340d/
+        https://www.pluralsight.com/guides/pros-and-cons-of-client-side-rendering
+        -->
+
+        <div class="overview-container">
+            <h3 class="list-title">CSR</h3>
+            <div class="list-overview">
+                <ul class="list-points-container">
+                    <li><span class="list-point">+</span><p>Fast loading</p></li>
+                    <li><span class="list-point">+</span><p>Doesn't need to load the full page</p></li>
+                    <li><span class="list-point">+</span><p>Good for dynamic websites and webapps</p></li>
+                    <li><span class="list-point">+</span><p>High user traffic</p></li>
+                </ul>
+                <ul class="list-points-container">
+                    <li><span class="list-point">-</span><p>Could result in poor User experience</p></li>
+                    <li><span class="list-point">-</span><p>Could impact SEO negatively</p></li>
+                    <li><span class="list-point">-</span><p>Caching could become an issue</p></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="loverview-container">
+            <h3 class="list-title">SSR</h3>
+            <div class="list-overview">
+                <ul class="list-points-container">
+                    <li><span class="list-point">+</span><p>Great for static websites</p></li>
+                    <li><span class="list-point">+</span><p>Useful for websites with little interactivity</p></li>
+                    <li><span class="list-point">+</span><p>Better choice if SEO is a priority</p></li>
+                </ul>
+                <ul class="list-points-container">
+                    <li><span class="list-point">-</span><p>The website needs to be rebuilt every time</li>
+                    <li><span class="list-point">-</span><p>Problems with high user traffic</li>
+                    <li><span class="list-point">-</span><p>Expensive to host</li>
+                    <li><span class="list-point">-</span><p>May depend on internet speed</li>
+                </ul>
+            </div>
+        </div>
+
+        <p>Generally, it comes down your choice. Neither approach is withous flaws and viable. It will largely depend on what you want your application to achieve for the end user. Various frameworks such as <span class="code-highlight">Angular.js, BackBone.js, and React.js</span> are primarily suited for CSR. While other frameworks like <span class="code-highlight">Nuxt.js and NEXT.js</span> are developed with a SSR approach in mind.</p>
     </section>
 </div>
