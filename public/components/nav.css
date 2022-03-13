@@ -10,9 +10,13 @@
 }
 
 #menu-button.click .inner-flip-icon-container{
-    left: 260px;
+    left: 200px;
     transition: all .4s ease;
     transform: rotateY(180deg);
+}
+
+#menu-button.click{
+    transition: all .4s ease;
 }
 
 .button-span{
@@ -164,16 +168,13 @@ nav ul li a span.rotate{
     bottom: 0;
     background-color: rgba(0,0,0,0.5);
     z-index: 2;
-    animation: menu-fading-out;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
 }
 
 #menu-underlay.menu-fade{
     display: block;
     animation: menu-fading-in;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
+    animation-duration: .5s;
+    animation-timing-function: ease-in;
 }
 
 @keyframes
@@ -186,13 +187,39 @@ menu-fading-in{
     }
 }
 
-/*@keyframes 
-menu-fading-out{
-    0%{
-        background-color: rgba(0,0,0,0.5);
-    }
-    100%{
-        background-color: rgba(0,0,0,0);
-    }
-}*/
+#signature{
+    display: flex;
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    clip-path: circle(25%);
+    right: 20px;
+    bottom: 20px;
+    border: dashed 1px black;
+    background-color: lawngreen;
+    z-index: 5;
+    transition: clip-path 1s ease;
+}
 
+#signature.pop{
+    clip-path: circle(100%);
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+}
+
+#signature-text{
+    display: none;
+    position: absolute;
+    font-family: 'Roboto slab', serif;
+    font-weight: 600;
+    font-size: 2em;
+    bottom: 50px;
+    left: 50px;
+    font-size: 4em;
+}
+
+#signature.pop #signature-text{
+    display: flex;
+}

@@ -3,14 +3,14 @@
     <h1>Introduction</h1>
     <section>
         <h2>Variables in Javascript</h2>
-        <p>Before we venture into NodeJS lets discuss some fundamental Javascript first.
-        In Javascript syntax its possibe to declare value through three different keywords: <span class="code-highlight">var</span>, <span class="code-highlight">let</span>, and <span class="code-highlight">const</span>.
-        Its important to note that they all have difference means and purpose. Its common, if not best, practice to avoid <span class="code-highlight">var</span> keyword and use let and const in most case.
-        One of the reason is due the scope of var keyword which could lead to conflicts and difficulties in code maintainability.</p>
-        <p><span class="code-highlight">let</span> has a block specific local scope which avoids this issue. Which means its only accessible within the scope that its been declared.
+        <p>Lets handle some fundamental Javascript syntax first.</p>
+        <p>In Javascript you can declare variable through three different keywords: <span class="code-highlight">var</span>, <span class="code-highlight">let</span>, and <span class="code-highlight">const</span>.
+    
+        <p>The keyword <span class="code-highlight">let</span> has a restrained block specific local scope. This means its only accessible within the boundaries of where the variable been declared. In other words, the variable will remain only known to area of a given code block. The value of a let variable can be modifed on the fly. In other words, the value is <span class="code-highlight">mutable</span>.
         </p>
-        <p><span class="code-highlight">const</span> is used to declare and hold values that not be overwritten or be Modified. However, the value itself can be used as a base in combination with other variables.
-        Its primarily useful to carry or contain immutable values. Below are examples on how to declare variable by each keyword. A best practice is use <span class="code-highight">const</span> whenever possible over the keywords at your disposal.</p>
+        <p>However, the <span class="code-highlight">const</span> keyword is used to declare and hold values that can not be overwritten or be Modified. However, the value itself can serve as a base in combination with other variables. 
+        Its practical to contain values you'd consider read-only. This phenomenon is known as <span class="code-highlight">immutability</span>.</p>
+        <p>Below are examples on how to declare variable by each keyword. Its recommended to use <span class="code-highight">const</span> whenever possible to define values.</p>
         <div class="code-snippet">
             <figure>
                 <code>let apple = "apple";</code>
@@ -29,36 +29,42 @@
             </figure>
             <p class="example-text">Above shows the declaration of a var variable.</p>
         </div>
-        <p>Its commonly regarded as a mistake to delcare an incrementer variable within a <span class="code-highlight">loop</span> with the<span class="code-highlight">var</span> keyword. This is generally regarded as bad practice since the variable actually accesibility goes beyond the boundary of the loop.</p>
-        <p>In case of loops its advised to use <span class="code-highlight">let</span> for iteration purposes</p>
+        <p>Its important to note that these keywords serve different purposes. Its common practice to avoid using <span class="code-highlight">var</span> keyword and substitute it with let and const whenever possible despite having var at your disposal.
+        A reason being is that its an outdated approach and the scope of the keyword can cause a domino effect of complications and difficulties with code maintainability, transparency and tracibility.</p>
+        <p>A common error is to delcare a loop incrementer with the<span class="code-highlight">var</span> keyword. The accesibility of the variable still breaches the boundary of the loop.</p>
+        <p>In case of loops, its advised to use always <span class="code-highlight">let</span> over var when iterating over collections, Like for example an array.</p>
         <div class="code-snippet">
             <figure>
                 <pre>
                     <code>
 for(var i = 0; 0 < 10; i++){
     
-    //this is not good practice
+    //this is bad practice! 
 
 }
 
-for(let i = 0; 0 < 10; i++){
+console.log(i) //the variable i can be reached here
+
+for(let j = 0; 0 < 10; j++){
     
     //this solves the possible unpredictability 
     //and uncertainity of using var
 
 }
+
+console.log(j) //the variable j is unreachable
                     </code>
                 </pre>        
             </figure>
             <p class="example-text">The upper should be avoided example should in for or while-loops.</p>
         </div>
-
+        <p>All the keywords mentioned here are capable of holding all the <span class="code-highlight">primitive data types</span>: string, numeric values, and boolean logic. Additionally, Javascript variables can contain custom defined objects, functions, and data structures as well.</p>
 
     </section>
 
     <section>
         <h2>Objects</h2>
-        <p>The following section will describe how define objects in the Javascript context.</p>
+        <p>This section will go over define objects within a Javascript context.</p>
         <div class="code-snippet">
             <figure>
                 <pre>
@@ -72,6 +78,7 @@ console.log(monke.name) //this will print "gojira" in the console
                     </code>
                 </pre>        
             </figure>
+            <p class="example-text">example of an object with properties that was demonstrated during a lecture.</p>
         </div>
 
 
@@ -103,8 +110,10 @@ function anotherFunction(argument){
             <p class="example-text">Basic function examples.</p> 
         </div> 
         <h2>Arrow functions</h2> 
-        <p>In the prior section the common way of defining functions was described. However, in some circumstance we can get more concise and call <span class="code-highlight">arrow</span> or, also known as, <span class="code-highlight">anonymous</span> functions.</p>
-        <p>This logic stems from the concept of <span class="code-highlight">Referential transparency</span>.</p>
+        <p>In the prior section the common way of defining functions was described. However, in some circumstance we can write more brief functions called <span class="code-highlight">arrow</span> or, also known as, <span class="code-highlight">anonymous</span> functions. Alternatively, they're also known as a <span class="code-highlight">Lambda expressions</span> in other languages (derived from the mathematics of Lambda calculus).</p>
+        
+        <!-- usefyl source about the dicussion of referential transparency : https://stackoverflow.com/questions/210835/what-is-referential-transparency -->
+        <p>This logic stems from the concept of <span class="code-highlight">Referential transparency</span>, which essentially means "replacing an expression with something of equal meaning". With this concept we can condense the code syntax and be more concise in how we express sequences of logic.</p>
         <div class="code-snippet">
             <figure>
                 <pre>

@@ -1,0 +1,26 @@
+@media screen and (max-width: 800px){
+
+    nav{
+        flex-direction: column;
+        height: fit-content;
+        align-items: flex-end;
+    }
+
+    nav a{
+        height: 40px;
+    }
+
+    #documentation-container{
+        width: 95%;
+        padding: 2em;
+    }
+    
+    #footer{
+        width: 100%;
+        justify-content: center;
+    }
+
+    figure{
+        width: 100%;
+    }
+}
