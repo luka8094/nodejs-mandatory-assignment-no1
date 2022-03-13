@@ -9,9 +9,9 @@
     </section>
 
     <section>
-        <h2>NodeJS express server</h2>
+        <h2>NodeJS modules</h2>
 
-        <p>This section will go over the ways to a basic setup and prequisites of an NodeJS express server. Prior to initialization and installation of a NodeJS server its necessary to create a json file that will declare properties which specify dependencies to our node package manager (npm). First, You'll create a new <span class="code-highlight">package.json</span> file in the root of your folder structure. The file needs to contain a "dependencies". The "dependencies" property must reference "express" coupled with its version. the setup below.</p>
+        <p>The following sections will go over the ways to a basic setup and prequisites of an NodeJS project and express server. Prior to initialization and installation of a NodeJS server its necessary to create a json file that will declare properties which specify dependencies to our node package manager (npm). First, You'll create a new <span class="code-highlight">package.json</span> file in the root of your folder structure. The file needs to contain a "dependencies". The "dependencies" property must reference "express" coupled with its version. the setup below.</p>
         
         <div class="code-snippet">
             <figure>
@@ -27,35 +27,38 @@
             </figure>
             <p class="example-text">In the json file write a "dependencies" property which references to the required dependency and its version number.</p>
         </div>
-    <p>Alternative, you can initiatialize this set up through a command terminal and follow the steps along the way.</p>
 
-        <h2>Advanced dependencies setup</h2>
+        <p>Once the package.json package references have been specified, open your terminal and run the command line syntax below:</p>
 
         <div class="code-snippet">
             <figure>
-                <code>
-                    <pre>
+                <pre>
+<code>npm i express</code>
+                </pre>
+            </figure>
+            <p class="example-text">The above should prompt and automated installation process of the express package, provided your package.json file is correctly set up.</p>
+        </div>
 
-{
-                    
-"dependencies": {
-        "express" : "^4.17.3",
-        "cross-env" : "^7.0.3"
-    },
-    "scripts": {
-        "start": "node app.js",
-        "start-dev": "cross-env PORT=3000 nodemon.cmd app.js"
-    }
-}
-                    </pre>
-                </code>
+        <p>Alternative, you can initiatialize the "npm init" set up through a command terminal and follow along the queries entered in the terminal.</p>
+        <div class="code-snippet">
+            <figure>
+                <pre>   
+<code>npm init</code>
+                </pre>
             </figure>
         </div>
-    </section>
-
+        <p>Another option is to use the shortend syntax below to </p>
+        <div class="code-snippet">
+            <figure>
+                <pre>   
+<code>npm i</code>
+                </pre>
+            </figure>
+        </div>
+    </section>    
     <section>
-        <h2>npm and terminal commands</h2>
-        <p>Various terminal commands for NodeJS deployment</p>  
+        <h2>NPM and scripts</h2>
+        <p>"npm" is an abbreviation for <span class="code-highlight">node package manager</span>.</p>  
 
         <div class="code-snippet">    
             <figure>
@@ -79,47 +82,7 @@
 <code>node app.js</code>
                 </pre>
             </figure>
-        </div>
-
-        <div class="code-snippet">
-            <figure>
-                <pre>    
-<code>nodemon app.js</code>
-                </pre>
-            </figure>
-        </div>
-
-        <div class="code-snippet">
-            <figure>
-                <pre>
-<code>nodemon.cmd app.js</code>
-                </pre>
-            </figure>
-        </div>
-
-        <div class="code-snippet">
-            <figure>
-                <pre>   
-<code>npm init</code>
-                </pre>
-            </figure>
-        </div>
-
-        <div class="code-snippet">
-            <figure>
-                <pre>   
-<code>npm i</code>
-                </pre>
-            </figure>
-        </div>
-
-        <div class="code-snippet">
-            <figure>
-                <pre>
-<code>npm i express</code>
-                </pre>
-            </figure>
-        </div>
+        </div>      
 
         <div class="code-snippet">
             <figure>
@@ -128,6 +91,65 @@
                 </pre>
             </figure>
         </div>
+    </section>
+    <section>
+        <h2>Advanced dependencies setup</h2>
+
+        <div class="code-snippet">
+            <figure>
+                <code>
+                    <pre>
+
+{
+                    
+"dependencies": {
+        "express" : "^4.17.3",
+        "cross-env" : "^7.0.3"
+    },
+    "scripts": {
+        "start": "node app.js",
+        "start-dev": "cross-env PORT=3000 nodemon.cmd app.js"
+    }
+
+}
+                    </pre>
+                </code>
+            </figure>
+        </div>
+    </section>
+
+    <section>
+        <h2>Nodemon</h2>
+        <p>Nodemon is a practical <span class="code-highlight">monitoring tool</span> for development changes in a project. As soon as a change has been registered on certain project file, the tool will execute an automatic procedure, usually compiling the code.</p>
+        <p>To install the Nodemon package, you'll need to input the following command line into your terminal, assuming you're working from your project root folder:</p>
+        <div class="code-snippet">
+            <figure>
+                <pre>    
+<code>npm install -g nodemon</code>
+                </pre>
+            </figure>
+            <p class="example-text">The terminal installation syntax at courtesy from this source: https://www.npmjs.com/package/nodemon</p>
+        </div>
+        <p>After the installation is complete, nodemon can be executed via the following syntax:</p>
+        <div class="code-snippet">
+            <figure>
+                <pre>    
+<code>nodemon app.js</code>
+                </pre>
+            </figure>
+            <p class="example-text">The regular syntax to run the nodemon process.</p>
+        </div>
+
+        <div class="code-snippet">
+            <figure>
+                <pre>
+<code>nodemon.cmd app.js</code>
+                </pre>
+            </figure>
+            <p class="example-text">In some cases, the above syntax will be needed. Both are equally valid.</p>
+        </div>
+
+
     </section>
 
     <section>
