@@ -10,7 +10,6 @@
 
 .list-overview{
     display: flex;
-    border: dashed 1px black;
     padding: 1em;
 }
 

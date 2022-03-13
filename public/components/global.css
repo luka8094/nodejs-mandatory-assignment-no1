@@ -3,6 +3,7 @@
 @import "styles.css";
 @import "icon-flip.css";
 @import "overview.css";
+@import "media-queries.css";
 
 *{
     margin: 0;
