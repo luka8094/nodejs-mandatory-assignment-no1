@@ -6,6 +6,7 @@
     width: 60px;
     transition: all .4s ease;
     perspective: 1000px;
+    z-index: 3;
 }
 
 #menu-button.click .inner-flip-icon-container{
@@ -57,6 +58,7 @@
     height: 100%;
     left: -250px;
     transition: left .4s ease;
+    z-index: 3;
 }
 
 .sidebar.show{
@@ -151,6 +153,46 @@ nav ul li a span.rotate{
     font-weight: 500;
 }
 
+#menu-underlay{
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    animation: menu-fading-out;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
 
+#menu-underlay.menu-fade{
+    display: block;
+    animation: menu-fading-in;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
 
+@keyframes
+menu-fading-in{
+    0%{
+        background-color: rgba(0,0,0,0.0);
+    }
+    100%{
+        background-color: rgba(0,0,0,0.5);
+    }
+}
+
+/*@keyframes 
+menu-fading-out{
+    0%{
+        background-color: rgba(0,0,0,0.5);
+    }
+    100%{
+        background-color: rgba(0,0,0,0);
+    }
+}*/
 
