@@ -11,7 +11,7 @@
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform .8s;
+    transition: all .8s ease;
     transform-style: preserve-3d;
 }
 
@@ -39,7 +39,7 @@
 
 .back-side{
     display: flex;
-    background: black;
+    background: lightgreen;
     align-items: center;
     justify-content: center;
     transform: rotateY(180deg);

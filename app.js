@@ -17,10 +17,10 @@ const mainPageFooter = fileSystem.readFileSync("./public/components/main-page-fo
 
 //Pages
 const mainPage = fileSystem.readFileSync("./public/pages/main.html").toString()
-const introduction = fileSystem.readFileSync("./public/pages/basic-javascript.html").toString()
-const firstServer = fileSystem.readFileSync("./public/pages/nodejs.html").toString()
-const servingHtml = fileSystem.readFileSync("./public/pages/nodejs-setup.html").toString()
-const ssr = fileSystem.readFileSync("./public/pages/terminal-commands.html").toString()
+const introduction = fileSystem.readFileSync("./public/pages/introduction.html").toString()
+const firstServer = fileSystem.readFileSync("./public/pages/first-server.html").toString()
+const servingHtml = fileSystem.readFileSync("./public/pages/serving-html.html").toString()
+const ssr = fileSystem.readFileSync("./public/pages/ssr.html").toString()
 
 //Pages combined with components
 const fullMainPage = nav + mainPage + mainPageFooter
@@ -31,7 +31,7 @@ const fullSsr = nav + ssr + footer
 
 
 //Variables
-const connection = "connected"
+//const connection = "connected"
 
 
 //Establish port

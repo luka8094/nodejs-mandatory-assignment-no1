@@ -1,0 +1,170 @@
+
+<div id="documentation-container">
+    <h1>First server</h1>
+    <section>
+        <h2>What is NodeJS?</h2>
+        <p><span class="code-highlight">NodeJS</span> is a runtime environment built around Javascript. The environment is wrapped around Google Chrome's <span class="code-highlight">V8 engine</span> (browser engine) from which the web application is executed.</p>
+        <p>An important emphasis needs to be put on that <span>its not a framework</span> which is a common misunderstanding. NodeJS itself is open source and executable on multiple environments. It serves for various purposes such as building web or mobile solutions.</p>
+        <p>Some notable examples of high-profile businesses which utilize NodeJS for their services are Uber and Paypal.</p>
+    </section>
+
+    <section>
+        <h2>NodeJS express server</h2>
+
+        <p>This section will go over the ways to a basic setup and prequisites of an NodeJS express server. Prior to initialization and installation of a NodeJS server its necessary to create a json file that will declare properties which specify dependencies to our node package manager (npm). First, You'll create a new <span class="code-highlight">package.json</span> file in the root of your folder structure. The file needs to contain a "dependencies". The "dependencies" property must reference "express" coupled with its version. the setup below.</p>
+        
+        <div class="code-snippet">
+            <figure>
+                <code>
+                    <pre>
+{
+                    
+"dependencies": {
+        "express" : "^4.17.3"
+}
+                    </pre>
+                </code>
+            </figure>
+            <p class="example-text">In the json file write a "dependencies" property which references to the required dependency and its version number.</p>
+        </div>
+    <p>Alternative, you can initiatialize this set up through a command terminal and follow the steps along the way.</p>
+
+        <h2>Advanced dependencies setup</h2>
+
+        <div class="code-snippet">
+            <figure>
+                <code>
+                    <pre>
+
+{
+                    
+"dependencies": {
+        "express" : "^4.17.3",
+        "cross-env" : "^7.0.3"
+    },
+    "scripts": {
+        "start": "node app.js",
+        "start-dev": "cross-env PORT=3000 nodemon.cmd app.js"
+    }
+}
+                    </pre>
+                </code>
+            </figure>
+        </div>
+    </section>
+
+    <section>
+        <h2>npm and terminal commands</h2>
+        <p>Various terminal commands for NodeJS deployment</p>  
+
+        <div class="code-snippet">    
+            <figure>
+                <pre>
+<code>npm run start</code>
+                </pre>
+            </figure>
+        </div>
+
+        <div class="code-snippet">
+            <figure>
+                <pre>
+<code>npm run start-dev</code>
+                </pre>
+            </figure>
+        </div>
+
+        <div class="code-snippet">
+            <figure>
+                <pre>
+<code>node app.js</code>
+                </pre>
+            </figure>
+        </div>
+
+        <div class="code-snippet">
+            <figure>
+                <pre>    
+<code>nodemon app.js</code>
+                </pre>
+            </figure>
+        </div>
+
+        <div class="code-snippet">
+            <figure>
+                <pre>
+<code>nodemon.cmd app.js</code>
+                </pre>
+            </figure>
+        </div>
+
+        <div class="code-snippet">
+            <figure>
+                <pre>   
+<code>npm init</code>
+                </pre>
+            </figure>
+        </div>
+
+        <div class="code-snippet">
+            <figure>
+                <pre>   
+<code>npm i</code>
+                </pre>
+            </figure>
+        </div>
+
+        <div class="code-snippet">
+            <figure>
+                <pre>
+<code>npm i express</code>
+                </pre>
+            </figure>
+        </div>
+
+        <div class="code-snippet">
+            <figure>
+                <pre>
+<code>npm install express</code>
+                </pre>
+            </figure>
+        </div>
+    </section>
+
+    <section>
+        <h2>Initializing the express server</h2>
+        <p>In this section I'll explain how to intiate the express server in NodeJS. First declare a variable that instantiates the <span class="code-highlight">express</span> module. Thise is done by the <span class="code-highlight">require</span></p>
+        <div class="code-snippet">
+            <figure>
+                <pre>
+<code>const express = require("express")</code>
+                </pre>    
+            </figure>
+        </div>
+        <p>Afterwards you call upon Initializing the module and assigning it to a variable that will act as an instance of the NodeJS application. The application instance must be declared as "app".</p>
+        <div class="code-snippet">
+            <figure>
+                <pre>
+<code>const app = express()</code>
+                </pre>    
+            </figure>
+        </div>
+        <p>Alternatively, you can direct instantiate and apply the <span class="code-highlight">express</span> module and instantiate the app in one line as shown below.</p>
+        <div class="code-snippet">
+            <figure>
+                <pre>
+<code>const app = require("express")()</code>
+                </pre>    
+            </figure>
+        </div>
+        <p>Before our server is live or use, you'll need to call the <span class="code-highlight">listen(...)</span> function set a valid port that it will be connected to.</p>
+
+        <div class="code-snippet">
+            <figure>
+                <pre>
+<code>app.listen(3000, () => console.log("Running on server port", 3000))</code>
+                </pre>    
+            </figure>
+        </section>
+    </div>
+ 
+</div>

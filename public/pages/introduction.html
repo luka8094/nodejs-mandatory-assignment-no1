@@ -1,0 +1,164 @@
+
+<div id="documentation-container"> 
+    <h1>Introduction</h1>
+    <section>
+        <h2>Variables in Javascript</h2>
+        <p>Before we venture into NodeJS lets discuss some fundamental Javascript first.
+        In Javascript syntax its possibe to declare value through three different keywords: <span class="code-highlight">var</span>, <span class="code-highlight">let</span>, and <span class="code-highlight">const</span>.
+        Its important to note that they all have difference means and purpose. Its common, if not best, practice to avoid <span class="code-highlight">var</span> keyword and use let and const in most case.
+        One of the reason is due the scope of var keyword which could lead to conflicts and difficulties in code maintainability.</p>
+        <p><span class="code-highlight">let</span> has a block specific local scope which avoids this issue. Which means its only accessible within the scope that its been declared.
+        </p>
+        <p><span class="code-highlight">const</span> is used to declare and hold values that not be overwritten or be Modified. However, the value itself can be used as a base in combination with other variables.
+        Its primarily useful to carry or contain immutable values. Below are examples on how to declare variable by each keyword. A best practice is use <span class="code-highight">const</span> whenever possible over the keywords at your disposal.</p>
+        <div class="code-snippet">
+            <figure>
+                <code>let apple = "apple";</code>
+            </figure>
+            <p class="example-text">Above is the syntax to declare a let variable.</p>
+        </div>
+        <div class="code-snippet">
+            <figure>
+                <code>const PI = 3.14;</code>
+            </figure>
+            <p class="example-text">The code snippet above show a const variable with the numeric value 3.14.</p>
+        </div>
+        <div class="code-snippet">
+            <figure>
+                <code>var global = "I'm all over the place!";</code>
+            </figure>
+            <p class="example-text">Above shows the declaration of a var variable.</p>
+        </div>
+        <p>Its commonly regarded as a mistake to delcare an incrementer variable within a <span class="code-highlight">loop</span> with the<span class="code-highlight">var</span> keyword. This is generally regarded as bad practice since the variable actually accesibility goes beyond the boundary of the loop.</p>
+        <p>In case of loops its advised to use <span class="code-highlight">let</span> for iteration purposes</p>
+        <div class="code-snippet">
+            <figure>
+                <pre>
+                    <code>
+for(var i = 0; 0 < 10; i++){
+    
+    //this is not good practice
+
+}
+
+for(let i = 0; 0 < 10; i++){
+    
+    //this solves the possible unpredictability 
+    //and uncertainity of using var
+
+}
+                    </code>
+                </pre>        
+            </figure>
+            <p class="example-text">The upper should be avoided example should in for or while-loops.</p>
+        </div>
+
+
+    </section>
+
+    <section>
+        <h2>Objects</h2>
+        <p>The following section will describe how define objects in the Javascript context.</p>
+        <div class="code-snippet">
+            <figure>
+                <pre>
+                    <code>
+let monke = {
+    "name" : "gojira",
+    "food" : "banana smoothie"
+}    
+
+console.log(monke.name) //this will print "gojira" in the console
+                    </code>
+                </pre>        
+            </figure>
+        </div>
+
+
+    </section>
+
+    <section>
+        <h2>Functions</h2>
+        <p>In regular Javascript syntax, blocks of code that fulfill a specific task or a task are declared by using the <span class="code-highlight">function</span> keyword. Such as shown below.</p>
+        <div class="code-snippet">
+            <figure>
+                <pre>
+                    <code>
+function someFunction(){
+
+    console.log("This a basic function")
+
+}
+
+function anotherFunction(argument){
+
+    if(argument){
+        console.log("another function with a parameter")
+    }
+
+}
+                    </code>
+                </pre>        
+            </figure> 
+            <p class="example-text">Basic function examples.</p> 
+        </div> 
+        <h2>Arrow functions</h2> 
+        <p>In the prior section the common way of defining functions was described. However, in some circumstance we can get more concise and call <span class="code-highlight">arrow</span> or, also known as, <span class="code-highlight">anonymous</span> functions.</p>
+        <p>This logic stems from the concept of <span class="code-highlight">Referential transparency</span>.</p>
+        <div class="code-snippet">
+            <figure>
+                <pre>
+                    <code>
+//Regular notation for function(s) without arrows
+function aFunction(argument){
+
+    if(argument){
+        console.log("the argument was true")
+    }
+
+}
+
+//with arrows
+function(e) => { 
+    if(e){
+        console.log("the argument e was evaluated")
+    }
+}
+
+(e) => {
+
+    if(e){
+        console.log("the argument was also evaluated here")
+    }
+
+}
+
+() => console.log("direct anonymous function call")
+
+                    </code>
+                </pre>
+            </figure>
+        </div>
+        <h2>Callbacks</h2>
+        <p>A callback is a "function reference" and a way for which functions can take other function as an arguments.</p>
+        <div class="code-snippet">
+            <figure>
+                <pre>
+                    <code>
+
+htmlElement.onclick = callOnMe
+
+function callOnMe(){
+
+    console.log("Callback through an arrow function")
+
+}
+                    </code>
+                </pre>
+            </figure>
+        </div>
+
+    </section>
+
+
+</div>
