@@ -195,10 +195,13 @@ menu-fading-in{
     clip-path: circle(25%);
     right: 20px;
     bottom: 20px;
-    border: dashed 1px black;
     background-color: lawngreen;
     z-index: 5;
-    transition: clip-path 1s ease;
+    transition: all 1s ease;
+}
+
+#signature:hover{
+    clip-path: circle(40%);
 }
 
 #signature.pop{
@@ -207,10 +210,11 @@ menu-fading-in{
     height: 100%;
     bottom: 0;
     right: 0;
+    transition: all 1s ease;
 }
 
 #signature-text{
-    display: none;
+    display: flex;
     position: absolute;
     font-family: 'Roboto slab', serif;
     font-weight: 600;
@@ -218,8 +222,11 @@ menu-fading-in{
     bottom: 50px;
     left: 50px;
     font-size: 4em;
+    color: rgba(0,0,0,0.0);
+    transition: color 2s ease;
+    transition-delay: .5s;
 }
 
 #signature.pop #signature-text{
-    display: flex;
+    color: rgba(0,0,0,1);
 }
